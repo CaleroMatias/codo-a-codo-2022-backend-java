@@ -11,4 +11,41 @@
 		<maven.compler.source>11</maven.compler.source>
 		<maven.compler.target>11</maven.compler.target>
 	</properties>
+	<dependencies>
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.29</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.4.0</version>
+</dependency>
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>10.2.0.jre11</version>
+</dependency>
+
+<!-- Dependencia para usar los controladores (conectar con el front) con servelet -->
+<dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>5.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<!-- Dependencia para usar  pagina dinamica -->
+<dependency>
+    <groupId>jakarta.servlet.jsp</groupId>
+    <artifactId>jakarta.servlet.jsp-api</artifactId>
+    <version>3.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+	
+	</dependencies>
 </project>				
