@@ -24,28 +24,47 @@
     <artifactId>postgresql</artifactId>
     <version>42.4.0</version>
 </dependency>
-<dependency>
-    <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>mssql-jdbc</artifactId>
-    <version>10.2.0.jre11</version>
-</dependency>
-
 <!-- Dependencia para usar los controladores (conectar con el front) con servelet -->
 <dependency>
-    <groupId>jakarta.servlet</groupId>
-    <artifactId>jakarta.servlet-api</artifactId>
-    <version>5.0.0</version>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
     <scope>provided</scope>
 </dependency>
 
 <!-- Dependencia para usar  pagina dinamica -->
 <dependency>
-    <groupId>jakarta.servlet.jsp</groupId>
-    <artifactId>jakarta.servlet.jsp-api</artifactId>
-    <version>3.0.0</version>
+    <groupId>javax.servlet.jsp</groupId>
+    <artifactId>javax.servlet.jsp-api</artifactId>
+    <version>2.3.3</version>
     <scope>provided</scope>
 </dependency>
-
-	
 	</dependencies>
+	<build>
+<finalName>codoacodo-back</finalName>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+ <artifactId>maven.dependecy-plugin</artifactId>
+   <executions>
+   <execution>
+   <phase>package</phase>
+   <goals>
+   <goal>copy</goal>
+   </goals>
+   <configuration>
+   <artifactItems>
+   <artifactItem>
+    <groupId>com.heroku</groupId>
+    <artifactId>webapp-runner</artifactId>
+    <version>9.0.41.0</version>
+    <destFileName>webapp-runner.jar</destFileName>
+   </artifactItem>
+   </artifactItems>
+   </configuration>
+   </execution>
+   </executions>
+</plugin>
+</plugins>
+</build>
 </project>				
