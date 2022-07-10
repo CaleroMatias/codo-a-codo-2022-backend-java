@@ -7,16 +7,20 @@ public class AdministradorDeConexiones {
 	
 	public static Connection getConnection(){
 		
-		String url="jdbc:mysql://127.0.0.1:3306/codo-a-codo?serverTimeZone=UTC&userSSL=false";
+		/*String url="jdbc:mysql://127.0.0.1:3306/codo-a-codo?serverTimeZone=UTC&userSSL=false";
 		String username="root";
-		String password="root";
+		String password="root";		
+		String driverName="com.mysql.cj.jdbc.Driver";*/
 		
-		String driverName="com.mysql.cj.jdbc.Driver";
+		String url=System.getenv("DATASOURCE_URL");
+		String user=System.getenv("DATASOURCE_USERNAME");
+		String password=System.getenv("DATASOURCE_PASSWORD");
+		String driverName=System.getenv("DATASOURCE_DRIVER");
 		
 		Connection con=null;		
 		try {
 			Class.forName(driverName);//carga en memoria el Driver
-			con= DriverManager.getConnection(url, username, password);
+			con= DriverManager.getConnection(url,user,password);
 		}
 		catch(Exception e ) {
 			e.printStackTrace();
