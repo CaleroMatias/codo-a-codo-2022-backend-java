@@ -6,7 +6,7 @@
 	<artifactId>codoacodo-back</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>codo-acodo-back</name>
+	<name>codoacodo-back</name>
 	<properties>
 		<maven.compler.source>11</maven.compler.source>
 		<maven.compler.target>11</maven.compler.target>
@@ -41,7 +41,7 @@
 </dependency>
 	</dependencies>
 	<build>
-	  <finalName>codo-acodo-back</finalName> 
+	  <finalName>codoacodo-back</finalName> 
 	  	<plugins>
 	  	  <plugin>
 	  	    <groupId>org.apache.maven.plugins</groupId>
