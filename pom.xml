@@ -41,7 +41,7 @@
 </dependency>
 	</dependencies>
 	<build>
-	  <finalName>codoacodo-back</finalName> 
+	  <finalName>codo-acodo-back</finalName> 
 	  	<plugins>
 	  	  <plugin>
 	  	    <groupId>org.apache.maven.plugins</groupId>
