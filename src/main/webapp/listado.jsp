@@ -12,7 +12,7 @@
     <%@include file="navbar.jsp" %>
     <div class="container">
      <section>
-     <h1>Alta</h1>
+     <h1>Listado</h1>
       <table class="table">
   <thead>
     <tr>
