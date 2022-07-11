@@ -20,6 +20,7 @@
       <th scope="col">TiTULO</th>
       <th scope="col">PRECIO</th>
       <th scope="col">C&Oacute;DIGO</th>
+       <th scope="col">C&nbsp;DIGO</th>
     </tr>
   </thead>
      <%
@@ -34,6 +35,8 @@
       <td><%=unProducto.getNombre()%></td>
       <td><%=unProducto.getPrecio()%></td>
       <td><%=unProducto.getCodigo()%></td>
+      <td> <a class="btn btn-danger" href="<%=request.getContextPath()%>/api/EliminarController?id=<%=unProducto.getIdProducto()%>" role="button">Eliminar</a> 
+      <a class="btn btn-primary" href="<%=request.getContextPath()%>/api/EditarController?id=<%=unProducto.getIdProducto()%>" role="button">Editar</a> </td>
     </tr>  
     <%
     };
